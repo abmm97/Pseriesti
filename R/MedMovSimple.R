@@ -11,3 +11,4 @@ function (datos, r){
   Media_Movil_Simple=data.frame(cbind(Mt,Zt_1,S))
   Media_Movil_Simple
 }
+library(Pseriesti)
