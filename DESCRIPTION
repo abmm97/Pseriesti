@@ -1,11 +1,15 @@
 Package: Pseriesti
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Suavización de Series de tiempo (Holt-winters y Brown)
+Version: 0.1.1
+Authors@R:
+    person("Anthony", "Moran", email = "20160233@lamolina.edu.pe", role = c("aut", "cre"))
+Description: El paquete contiene dos métodos de suavización de series de tiempo,
+    la suavización Holtwinters y la cuadrática de Brown, permite obtener predicciónes 
+    de las series de tiempo y encontrar el valor optimo de los parámtros requeridos.
+    Esta necesitará para Brown un conjunto de datos que contengan el t y Zt
+    Para HW se necesitará los datos que contengan las columanas de t, Zt, mes y año.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.1.1

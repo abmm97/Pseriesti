@@ -1,4 +1,11 @@
-function(datos,alfa){
+#' @name  suavi_brownC
+#' @title Suavización Brown-Cuadrática
+#' @param datos Arreglo de datos con las columnas t, Zt
+#' @param alfa valor del parametro <1, puede ser un vector para porbar el mejor
+#'
+#' @return tabla de datos de los Zt suavizados y bt's suavizado y el at
+#' @export suavi_brownC
+suavi_brownC<-function(datos,alfa){
   Zt_a=matrix(datos[,2],nrow(datos),length(alfa))
   Zt_aa=matrix(datos[,2],nrow(datos),length(alfa))
   Zt_aaa=matrix(datos[,2],nrow(datos),length(alfa))

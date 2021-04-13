@@ -1,4 +1,24 @@
-function(datos,col_zt,anio,mes,A,C,D,metodo=c("aditivo","multiplicativo"),prediccion=NULL){
+#' @name SuavizaHOLTW
+#' @title Suavización Holt-Winter
+#'
+#' @description  Método de suavización aditivo o multiplicativo, que brinda la tabla con los valores
+#'de Ft, Zt , Tt, Zt suavizado y el at (error). Además de obtener la desviación general
+#'de la serie suavizada y valores predecidos si fuera necesario.
+#'
+#' @param datos Arreglo de datos con las columnas t, Zt, mes y año
+#' @param col_zt valor numérico de la columna de los Zt
+#' @param anio valor numérico de la columna de los años
+#' @param mes valor numérico de la columna de los meses
+#' @param A valor del parametro <1, A+C+D =1
+#' @param C valor del parametro <1, A+C+D =1
+#' @param D valor del parametro <1, A+C+D =1
+#' @param metodo "multiplicativo" o "aditivo"
+#' @param prediccion valor numérico del tiempo (t) o periodo del que se quiere predecir el Zt suavizado
+#'
+#' @return tabla de datos Ft, Zt , Tt, Zt suavizado y el at
+#' @importFrom 'utils' 'tail'
+#' @export SuavizaHOLTW
+SuavizaHOLTW<-function(datos,col_zt,anio,mes,A,C,D,metodo=c("aditivo","multiplicativo"),prediccion=NULL){
   Ft_as=rep(0,nrow(datos))
   Zt_as=rep(0,nrow(datos))
   Tt_as=rep(0,nrow(datos))
