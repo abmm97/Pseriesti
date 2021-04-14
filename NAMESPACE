@@ -2,4 +2,5 @@
 
 export(SuavizaHOLTW)
 export(suavi_brownC)
+export(suavi_expon)
 importFrom('utils','tail')
