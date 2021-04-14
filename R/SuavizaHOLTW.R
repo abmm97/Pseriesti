@@ -73,13 +73,13 @@ SuavizaHOLTW<-function(datos,col_zt,anio,mes,A,C,D,metodo=c("aditivo","multiplic
     }
     SC=sum(at^2)
     resul=data.frame(cbind(Ft_as,Zt_as,Tt_as,Zt_suav,at))
-    list(HoltWinters_Multiplicativo=resul,
+    list(HoltWinters=resul,
          Suma_Cuadrados_at=SC,
          Prediccion=Estimado)
   } else {
     SC=sum(at^2)
     resul=data.frame(cbind(Ft_as,Zt_as,Tt_as,Zt_suav,at))
-    list(HoltWinters_Multiplicativo=resul,
+    list(HoltWinters=resul,
          Suma_Cuadrados_at=SC)
   }
 }
